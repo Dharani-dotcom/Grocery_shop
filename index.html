@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshMart — Groceries Delivered Fast</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">FreshMart</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Cart Button -->
+        <button class="cart-btn" id="cartBtn" aria-label="Open Cart">
+          <i class="ph ph-shopping-basket"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== CART DRAWER ========== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>Your Basket</h2>
+      <button class="cart-close" id="cartClose"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="ph ph-basket"></i>
+        <p>Your basket is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">₹0.00</span>
+      </div>
+      <button class="btn-checkout">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-decor">
+      <div class="decor-blob blob-1"></div>
+      <div class="decor-blob blob-2"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">🚚 Free delivery over ₹499</div>
+        <h1 class="hero-title">
+          Fresh Groceries<br />
+          <span class="highlight">Delivered Fast</span>
+        </h1>
+        <p class="hero-sub">Farm-fresh produce, dairy & pantry essentials — straight to your door within 2 hours.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary">Shop Now <i class="ph ph-arrow-right"></i></a>
+          <a href="#about" class="btn-ghost">Learn More</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>2,500+</strong><span>Products</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>50k+</strong><span>Customers</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>4.9★</strong><span>Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrap">
+          <div class="floating-card card-1">🥑 Avocado <strong>₹89</strong></div>
+          <div class="floating-card card-2">🥛 Fresh Milk <strong>₹55</strong></div>
+          <div class="hero-badge">🌱 100% Organic</div>
+          <div class="hero-illustration">
+            <div class="produce-grid">
+              <span class="produce-emoji" style="--d:0s">🍅</span>
+              <span class="produce-emoji" style="--d:.1s">🥦</span>
+              <span class="produce-emoji" style="--d:.2s">🍋</span>
+              <span class="produce-emoji" style="--d:.3s">🥕</span>
+              <span class="produce-emoji" style="--d:.4s">🍇</span>
+              <span class="produce-emoji" style="--d:.5s">🧅</span>
+              <span class="produce-emoji" style="--d:.6s">🍓</span>
+              <span class="produce-emoji" style="--d:.7s">🥑</span>
+              <span class="produce-emoji" style="--d:.8s">🫐</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES STRIP ========== -->
+  <section class="features-strip">
+    <div class="features-container">
+      <div class="feature-item">
+        <i class="ph ph-truck"></i>
+        <div><strong>2-Hour Delivery</strong><p>Lightning-fast to your door</p></div>
+      </div>
+      <div class="feature-item">
+        <i class="ph ph-leaf"></i>
+        <div><strong>100% Organic</strong><p>Certified farm-fresh produce</p></div>
+      </div>
+      <div class="feature-item">
+        <i class="ph ph-shield-check"></i>
+        <div><strong>Quality Assured</strong><p>Freshness guaranteed</p></div>
+      </div>
+      <div class="feature-item">
+        <i class="ph ph-arrow-counter-clockwise"></i>
+        <div><strong>Easy Returns</strong><p>Hassle-free replacements</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS SECTION ========== -->
+  <section class="products" id="products">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Our Selection</span>
+        <h2 class="section-title">Fresh Picks <span class="highlight">This Week</span></h2>
+        <p class="section-sub">Handpicked from local farms and trusted suppliers every morning.</p>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fruits">🍓 Fruits</button>
+        <button class="filter-btn" data-filter="vegetables">🥦 Vegetables</button>
+        <button class="filter-btn" data-filter="dairy">🥛 Dairy</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about" id="about">
+    <div class="section-container about-container">
+      <div class="about-visual">
+        <div class="about-image-frame">
+          <div class="about-emoji-wall">
+            <span>🌾</span><span>🥕</span><span>🍅</span>
+            <span>🧀</span><span>🫛</span><span>🍋</span>
+            <span>🥬</span><span>🍇</span><span>🫙</span>
+          </div>
+        </div>
+        <div class="about-badge-float">
+          <strong>Since 2018</strong>
+          <span>Serving families fresh</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">More Than a<br/><span class="highlight">Grocery Store</span></h2>
+        <p>FreshMart was born from a simple belief — everyone deserves access to fresh, wholesome food without the hassle. We partner directly with local farmers to bring you the best seasonal produce, dairy, and pantry staples.</p>
+        <p>Our team hand-selects every product, ensuring you receive only the freshest items. From our warehouse to your doorstep in under 2 hours — every single day.</p>
+        <div class="about-values">
+          <div class="value-chip"><i class="ph ph-plant"></i> Farm Direct</div>
+          <div class="value-chip"><i class="ph ph-clock"></i> Same-Day Delivery</div>
+          <div class="value-chip"><i class="ph ph-heart"></i> Family Owned</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact" id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">We'd Love to <span class="highlight">Hear From You</span></h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <i class="ph ph-map-pin"></i>
+            <div><strong>Visit Us</strong><p>42, Anna Salai, Trichy, Tamil Nadu</p></div>
+          </div>
+          <div class="contact-info-item">
+            <i class="ph ph-phone"></i>
+            <div><strong>Call Us</strong><p>+91 98400 12345</p></div>
+          </div>
+          <div class="contact-info-item">
+            <i class="ph ph-envelope"></i>
+            <div><strong>Email Us</strong><p>hello@freshmart.in</p></div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Ravi Kumar" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="ravi@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">
+            Send Message <i class="ph ph-paper-plane-tilt"></i>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Thanks! We'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">FreshMart</span>
+        </a>
+        <p>Fresh food delivered fast. Straight from farms to your family table.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links-col">
+        <h4>Categories</h4>
+        <a href="#products">Fruits</a>
+        <a href="#products">Vegetables</a>
+        <a href="#products">Dairy</a>
+        <a href="#products">Pantry</a>
+      </div>
+      <div class="footer-links-col">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Track Order</a>
+        <a href="#">Returns</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FreshMart. All rights reserved. Made with 💚 in Tamil Nadu.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
